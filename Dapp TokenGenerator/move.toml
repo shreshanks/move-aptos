@@ -1,1 +1,6 @@
+[package]
+name = token-generator
+version = 0.1.0
 
+[dependencies]
+AptosFramework = aptos-coreaptos-moveframeworkaptos-framework
