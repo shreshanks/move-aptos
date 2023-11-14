@@ -1,0 +1,6 @@
+[package]
+name = "ikigai-chooser"
+version = "0.1.0"
+
+[dependencies]
+AptosFramework = "aptos-core/aptos-move/framework/aptos-framework"
