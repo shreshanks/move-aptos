@@ -1,0 +1,41 @@
+script {
+
+    // Function to calculate the sum of digits
+    public fun sumOfDigits(n: u8): u8 {
+        if (n == 0) {
+            return 0;
+        } else {
+            return n % 10 + sumOfDigits(n / 10);
+        }
+    }
+
+    // Function to check if a number is hybrid
+    public fun isHybridNumber(n: u8): bool {
+        let digitSum = sumOfDigits(n);
+        return n % digitSum == 0;
+    }
+
+    // Function to find hybrid numbers in a given range
+    public fun findHybridNumbers(start: u8, end: u8): vector<u8> {
+        let hybrids: vector<u8> = empty<u8>();
+
+        for (i in start..end) {
+            if (isHybridNumber(i)) {
+                hybrids.push_back(i);
+            }
+        }
+
+        return hybrids;
+    }
+
+    // Example usage
+    public fun main() {
+        let start = 1;
+        let end = 100;
+
+        let hybridNumbers = findHybridNumbers(start, end);
+
+        // Print the result
+        debug(hybridNumbers);
+    }
+}
