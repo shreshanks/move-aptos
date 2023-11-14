@@ -1,2 +1,2 @@
 # move-aptos
-this us my journey to learning move.
+This is my journey of learning move language for aptos blockchain.
